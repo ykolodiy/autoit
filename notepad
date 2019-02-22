@@ -1,0 +1,18 @@
+Run("notepad.exe")
+WinWaitActive("Untitled - Notepad")
+Send("This is some text.")
+WinClose("Untitled - Notepad")
+WinWaitActive("Notepad")
+;WinWaitActive("Notepad", "Do you want to save") ; When running under Windows XP
+Next we want to automatically press Alt-N to select the No/Don't save button 
+(Underlined letters in windows usually indicate that you can use the ALT key and that letter as a keyboard shortcut). 
+In the Send function to send an ALT key we use ! .
+
+Send("!s")
+Sleep(1500)
+ControlFocus("Save As","","Edit1")
+Sleep(1500)
+ControlSetText("Save As","","Edit1","Fuck4.txt")
+Sleep(1500)
+ControlClick("Save As","","Button2")
+WinClose("Untitled - Notepad")
