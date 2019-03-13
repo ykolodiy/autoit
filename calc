@@ -1,0 +1,30 @@
+#include <MsgBoxConstants.au3>
+
+Run("notepad.exe")
+WinWaitActive("Untitled - Notepad")
+
+; Wait 10 seconds for the Notepad window to appear.
+; Local $hWnd = WinWait("[CLASS:Notepad]", "", 10)
+
+
+Send("This is some text.")
+Local $sText = ControlGetText("Untitled - Notepad", "", "Edit1")
+
+
+WinClose("Untitled - Notepad")
+WinWaitActive("Notepad")
+;WinWaitActive("Notepad", "Do you want to save") ; When running under Windows XP
+Send("!s")
+Sleep(500)
+ControlFocus("Save As","","Edit1")
+Sleep(500)
+ControlSetText("Save As","","Edit1","Fuck6.txt")
+Sleep(500)
+
+
+
+ ; Display the text of the edit control.
+    MsgBox($MB_SYSTEMMODAL, "", "The text in Edit1 is: " & $sText)
+
+ControlClick("Save As","","Button2")
+WinClose("Untitled - Notepad")
