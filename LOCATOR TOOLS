@@ -1,0 +1,14 @@
+https://kb.froglogic.com/display/KB/Getting+information+about+toolkits+and+GUI+controls+%28Windows%29
+
+1
+The tool Inspect from Microsoft (download) can be used to check if a GUI supports the UI Automation (the latter used for Coded UI) technologies from Microsoft.
+http://download.froglogic.com/support/Inspect.zip
+
+
+2
+The tool AU3_Spy (download) tool (normally provided with [AutoIt] and AutoHotkey) can provide some basic information about many GUI controls when hovering over the desired control:
+http://download.froglogic.com/support/AU3_Spy.zip
+
+3
+The tool UISpy from Microsoft (download) can query the GUI of running applications for various information.
+http://download.froglogic.com/support/UISpy.zip
